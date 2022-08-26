@@ -5,24 +5,40 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Train",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                //"--cache-images",
+                "--epochs", "100",
+                "--workers", "8",
+                "--device", "0",
+                "--batch-size", "16",
+                "--data",  "datasets/Mitotic figures/train_dataset.yaml",
+                "--img", "512",
+                "--cfg", "datasets/Mitotic figures/yolov7_mitoticfigure.yaml",
+                "--weights", "datasets/Mitotic figures/yolov7_training.pt",
+                "--name", "yolov7_mitotic_fixed_res",
+                "--hyp", "data/hyp.scratch.custom.yaml",
+                //"--evolve"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": [
-                "--epochs", "100",
-                "--workers", "4",
-                "--device", "0",
-                "--batch-size", "16",
-                "--data",  "/mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/train_dataset.yaml",
-                "--img", "512",
-                "--cfg", "/mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/yolov7_mitoticfigure.yaml",
-                "--weights", "/mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/yolov7.pt",
-                "--name", "yolov7_mitotic_fixed_res",
-                "--hyp", "data/hyp.scratch.custom.yaml"
-            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
         }
     ]
 }

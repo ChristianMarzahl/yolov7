@@ -1,7 +1,11 @@
-train: /mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/train
-val: /mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/val
-test: /mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/test
+#train: /mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/train
+#val: /mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/val
+#test: /mnt/c/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/test
+
+train: /home/bronzi/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/train
+val: /home/bronzi/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/val
+test: /home/bronzi/Datasets/Mitotic Figures/MIDOG2021/YoloV7-Dataset/images/test
 
 # Classes
-nc: 1  # number of classes
-names: ['Mitotic figure']  # class names
+nc: 2  # number of classes
+names: ['Mitotic figure', 'imposter']  # class names
