@@ -1,0 +1,7 @@
+train: ../YoloV7-Dataset/images/train
+val: ../YoloV7-Dataset/images/val
+test: ../YoloV7-Dataset/images/test
+
+# Classes
+nc: 2  # number of classes
+names: ['Mitotic figure', 'imposter'] 
